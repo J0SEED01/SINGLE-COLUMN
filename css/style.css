@@ -1,0 +1,166 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+
+
+body{
+    height: 100vh;
+    background-color: white;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.main__header,
+.main__title,
+.main__paragraph{
+    margin-bottom: 20px;
+}
+
+.main__title{
+    color: hsl(0, 0%, 59%);
+    font-weight: 300;
+}
+
+.main__title span{
+    font-weight: 700;
+    color: hsl(209, 33%, 12%);
+}
+
+.main__paragraph{
+    color: hsl(209, 33%, 12%);
+}
+
+.main__form{
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.form__paragraph{
+    position: absolute;
+    font-size: 10px;
+    color: hsl(354, 100%, 66%);
+    font-style: italic;
+    top: 50px;
+    left: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.form__input,
+.form__submit{
+    border-radius: 20px; 
+    padding: 10px 15px;
+}
+
+.form__input{
+    width: 340px;
+    border: 1px solid hsl(0, 0%, 59%);
+}
+
+.form__submit{
+    cursor: pointer;
+    width: 170px;
+    background-color: hsl(223, 87%, 63%);
+    border: 1px solid hsl(223, 87%, 63%);
+    color: white;
+    text-transform: capitalize;
+    box-shadow: 0 5px 10px 0 hsl(0, 0%, 59%);
+    transition: filter .3s ease 0s;
+}
+
+.main__ilustration{
+    max-width: 700px;
+    height: 300px;
+    margin-bottom: 50px;
+}
+
+.link__img{
+    border: 1px solid hsl(0, 0%, 59%);
+    cursor: pointer;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color .3s ease 0s;
+}
+
+.footer__copyright{
+    color: hsl(0, 0%, 59%);;
+    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.copyright__img{
+    width: 10px;
+    height: 10px;
+}
+
+
+@media (hover: hover){
+
+    .form__submit:hover{
+        filter: brightness(1.5);
+    }
+
+    .link__img:hover{
+        background-color: hsl(223, 87%, 63%);
+    }
+}
+
+@media only screen and (max-width: 600px){
+
+    body{
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .main{
+        padding-top: 200px;
+    }
+
+    .form__paragraph{
+        top: 45px;
+        left: 40px;
+    }
+
+    .form__input,
+    .form__submit{
+        width: 85%;
+    }
+
+    .form__input{
+        margin-bottom: 30px;
+    }
+
+    .main__ilustration{
+        max-width: 300px;
+        height: auto;
+    }
+
+    .footer__link,
+    .footer__copyright{
+        margin-bottom: 20px;
+    }
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+}
